@@ -70,14 +70,14 @@ async def nn(ctx):
 		)
 
   def create_roles(i):
-		json = {
-		  "name": i
-		}
-		sessions.post(
-		  f"https://discord.com/api/v10/guilds/{guild}/roles",
-		  headers=headers,
-		  json=json
-		)
+	  json = {
+	    "name": i
+          }
+	  sessions.post(
+            f"https://discord.com/api/v10/guilds/{guild}/roles",
+	    headers=headers,
+            json=json
+          )
 
   for i in range(5):
 	  for role in list(ctx.guild.roles):
