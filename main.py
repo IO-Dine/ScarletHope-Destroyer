@@ -25,6 +25,7 @@ message_content = ["@everyone get fucked kids https://tenor.com/view/explosion-m
 @client.event
 async def on_connect():
   print("Connected to", client.user)
+  await client.change_presence(status=discord.Status.invisible)
 
 @client.command()
 async def scrape(ctx):
